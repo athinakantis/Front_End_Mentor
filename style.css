@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --mainFont: 'Roboto';
+  --primaryAccent: #591b93;
+  --black: #202020;
+}
+
+body {
+  font-family: var(--mainFont);
+  font-weight: 400;
+  color: var(--black);
+  width: 80%;
+  margin: auto;
+}
+
+main {
+  display: flex;
+  margin: 2rem 0 0;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+}
+
+header {
+  padding: 2rem 1rem;
+}
+
+.challenge img {
+  max-width: 500px;
+  max-height: 400px;
+}
+
+.challenge {
+  background-color: var(--primaryAccent);
+  padding: 2rem;
+  width: 90%;
+  border-radius: 10px;
+}
+
+nav {
+  width: max-content;
+  padding: 1rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  padding: 1rem 2rem;
+  border: 1px solid black;
+  display: block;
+  font-weight: 800;
+  color: var(--primaryAccent);
+}
+
+/* 
+Preview Div
+*/
+.preview {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  height: 540px;
+}
+
+#preview {
+  max-width: 600px;
+  transition: transform 500ms ease-out, opacity 300ms ease-in;
+  opacity: 0;
+  object-fit: contain;
+  transform-origin: center;
+}
