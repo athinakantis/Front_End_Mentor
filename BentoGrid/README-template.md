@@ -27,11 +27,12 @@ Users should be able to:
 
 ### Links
 
-- [Live Page]()
+- [Source Code](https://athinakantis.github.io/Front_End_Mentor/LaunchCountdown/index.html)
+- [Live Page](https://athinakantis.github.io/Front_End_Mentor/BentoGrid/bentogrid.html)
 
 ## My process
 
-I looked at it for a while, and my first approach was to use two grids (Silly, I know). After realizing my mistake, I corrected it so that the main content container is a flexbox and the 3 right columns is in a grid format.
+I looked at it for a while, and my first approach was to use two grids, however later I decided to go with a main container flexbox and the 3 right columns is in a grid format.
 
 ### Built with
 
