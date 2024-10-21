@@ -11,7 +11,7 @@
 }
 
 body {
-  font-family: var(--mainFont);
+  font-family: var(--mainFont), Helvetica;
   font-weight: 400;
   color: var(--black);
   width: 80%;
