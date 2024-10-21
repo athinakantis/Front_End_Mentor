@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --muddy: hsl(236, 21%, 26%);
+  --grayishBlue: hsl(237, 18%, 59%);
+  --veryDarkBlue: hsl(235, 16%, 14%);
+  --nearlyBlack: hsl(234, 17%, 12%);
+  --softRed: hsl(345, 95%, 68%);
+  --font: 'Red Hat Text';
+}
+
+body {
+  font-size: 14px;
+  font-family: var(--font);
+
+  background-color: var(--veryDarkBlue);
+  background-image: url(images/pattern-hills.svg),
+    linear-gradient(to top, rgb(66 33 99 / 40%), rgb(12 20 27 / 30%)),
+    url(images/bg-stars.svg);
+  background-repeat: repeat-x, no-repeat, repeat;
+  background-position-x: center, left, left;
+  background-position-y: bottom;
+  height: 100vh;
+  position: relative;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex: 1;
+  font-size: 1.5rem;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 600;
+  text-align: center;
+}
+
+p {
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--muddy);
+}
+
+.count-wrapper .label {
+  font-size: 1rem;
+  color: var(--grayishBlue);
+  font-weight: 700;
+}
+
+/* Count Styling */
+.countdown-container {
+  z-index: 5;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 10rem 0 auto;
+  flex: 3;
+}
+
+#dayCount,
+#hourCount,
+#minuteCount,
+#secondCount {
+  color: var(--softRed);
+  font-size: 5rem;
+  background-color: var(--muddy);
+  padding: 0.5rem;
+  filter: drop-shadow(0px 10px 1px var(--nearlyBlack));
+  border-radius: 5px;
+  margin: 0 0 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.upper::before,
+.lower::before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  bottom: -8px;
+  left: -8px;
+  background-color: var(--nearlyBlack);
+  border-radius: 50%;
+}
+
+.lower::before {
+  top: -8px;
+}
+
+.upper::after,
+.lower::after {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  background-color: var(--nearlyBlack);
+  border-radius: 50%;
+}
+
+.lower::after {
+  top: -8px;
+}
+
+.socials {
+  margin: 0 auto 40px;
+  width: max-content;
+}
+
+.socials svg {
+  margin: 0 0.5rem;
+}
+
+svg:hover {
+  cursor: pointer;
+}
+
+svg:hover :where(path) {
+  fill: var(--softRed);
+}
+
+.attribution {
+  text-align: center;
+  font-size: 11px;
+  text-align: center;
+  margin: 0 auto 1rem;
+  color: var(--grayishBlue);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.count-wrapper {
+  max-width: max-content;
+  position: relative;
+}
+
+.upper {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+  background-color: var(--muddy);
+  filter: brightness(80%);
+  padding: 0 1rem;
+  height: 70px;
+  min-width: 150px;
+}
+
+.lower {
+  min-width: 150px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+  background-color: var(--muddy);
+  padding: 0 1rem;
+  height: 70px;
+}
+
+.count-wrapper p {
+  color: var(--softRed);
+  font-size: 5rem;
+}
+.back {
+  filter: drop-shadow(0px 10px 1px var(--nearlyBlack));
+}
+.front {
+  position: absolute;
+}
+
+.back > .upper {
+  z-index: 1;
+}
+
+.back > .lower {
+  position: relative;
+  margin: 0 0 1rem;
+}
+
+.upper p {
+  position: relative;
+  top: 14px;
+}
+
+.lower p {
+  position: relative;
+  top: -56px;
+}
+
+.front > .lower {
+  z-index: 2;
+  transform: rotateX(-90deg);
+  transform-origin: top;
+  position: relative;
+}
+
+.front > .upper {
+  z-index: 2;
+  position: relative;
+  filter: brightness(80%);
+  transform-origin: bottom;
+}
+
+i {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: lavender;
+  border-radius: 50%;
+}
+
+.spark {
+  background-color: white;
+  width: 3px;
+  height: 3px;
+}
+
+@media only screen and (max-width: 750px) {
+  .countdown-container {
+    gap: 1rem;
+  }
+
+  .lower,
+  .upper {
+    min-width: 110px;
+    height: 50px;
+  }
+
+  .count-wrapper p {
+    font-size: 3rem;
+  }
+
+  .lower p {
+    top: -33px;
+  }
+
+  .upper p {
+    top: 16px;
+  }
+}
+
+@media only screen and (max-width: 535px) {
+  h1 {
+    font-size: 1.1rem;
+  }
+  .count-wrapper p {
+    font-size: 2rem;
+  }
+  .lower,
+  .upper {
+    min-width: 80px;
+    height: 40px;
+  }
+
+  .count-wrapper .label {
+    font-size: 0.7rem;
+  }
+
+  .upper p {
+    top: 19px;
+  }
+
+  .lower p {
+    top: -21px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  h1 {
+    margin: 7rem auto 4rem;
+    max-width: 270px;
+    letter-spacing: 5px;
+  }
+
+  .countdown-container {
+    margin: 0;
+    gap: 0.5rem;
+  }
+
+  .count-wrapper p {
+    font-size: 2rem;
+  }
+
+  .lower,
+  .upper {
+    min-width: 70px;
+    height: 40px;
+  }
+
+  .count-wrapper .label {
+    font-size: 0.5rem;
+  }
+
+  .upper p {
+    top: 19px;
+  }
+
+  .lower p {
+    top: -21px;
+  }
+
+  .upper {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+
+  .upper,
+  .lower {
+    padding: 0;
+  }
+
+  .lower {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .upper::after,
+  .lower::after {
+    width: 8px;
+    height: 8px;
+    bottom: -3px;
+    right: -3px;
+  }
+
+  .upper::before,
+  .lower::before {
+    width: 8px;
+    height: 8px;
+    bottom: -3px;
+    left: -3px;
+  }
+  .lower::after {
+    top: -4px;
+  }
+
+  .lower::before {
+    top: -4px;
+  }
+
+  .socials {
+    margin: 0 auto 1rem;
+  }
+}
