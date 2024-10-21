@@ -45,7 +45,6 @@ header {
 }
 
 nav {
-  width: max-content;
   padding: 1rem;
 }
 
@@ -55,6 +54,7 @@ ul {
 
 li {
   margin: 0 0 2rem;
+  width: max-content;
 }
 
 a {
