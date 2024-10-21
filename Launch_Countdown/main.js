@@ -8,6 +8,10 @@ function isBirthday() {
     return countdownDate.toJSON().slice(5, 10) === new Date().toJSON().slice(5, 10);
 }
 
+if (!isBirthday() && now > countdownDate) {
+    countdownDate.setFullYear(now.getFullYear())
+}
+
 const daysUpper = document.querySelector('#daysUpper');
 const daysLower = document.querySelector('#daysLower');
 const daysPrevCount = document.querySelectorAll(
