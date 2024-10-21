@@ -53,6 +53,10 @@ ul {
   list-style-type: none;
 }
 
+li {
+  margin: 0 0 2rem;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -60,23 +64,26 @@ a {
   border: 1px solid black;
   display: block;
   font-weight: 800;
-  color: var(--primaryAccent);
 }
 
 /* 
-Preview Div
+Preview Styling
 */
 .preview {
   display: flex;
   justify-content: center;
   flex: 1;
   height: 540px;
+  position: relative;
 }
 
-#preview {
+#preview,
+#videoPreview {
   max-width: 600px;
   transition: transform 500ms ease-out, opacity 300ms ease-in;
   opacity: 0;
   object-fit: contain;
   transform-origin: center;
+  position: absolute;
+  max-height: 100%;
 }
