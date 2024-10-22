@@ -25,6 +25,7 @@ body {
   background-repeat: repeat-x, no-repeat, repeat;
   background-position-x: center, left, left;
   background-position-y: bottom;
+  background-size: 100%, contain, contain;
   height: 100vh;
   position: relative;
 }
