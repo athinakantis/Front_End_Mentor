@@ -150,6 +150,7 @@ svg:hover :where(path) {
 }
 
 .count-wrapper {
+  max-height: max-content;
   max-width: max-content;
   position: relative;
 }
