@@ -1,0 +1,16 @@
+#stepOverview {
+    background-color: var(--purplishBlue);
+    text-transform: uppercase;
+    color: var(--white);
+    height: 100%;
+    margin: 0.5rem;
+    flex: 1;
+  }
+  
+  .stepDetails :first-child {
+    color: var(--coolGray);
+  }
+  
+  .stepDetails:last-child {
+    color: var(--white);
+  }
