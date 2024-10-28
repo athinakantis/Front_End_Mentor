@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import StepOverview from './StepOverview'
+import Overview from './Overview'
 
 
 function App() {
@@ -9,9 +9,9 @@ function App() {
 
   return (
     <main>
-      <StepOverview />
-    </main>
+      <Overview currentStep={step}/>
 
+    </main>
   )
 }
 

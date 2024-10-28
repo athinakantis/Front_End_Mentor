@@ -1,0 +1,45 @@
+#stepOverview {
+    background-color: var(--purplishBlue);
+    text-transform: uppercase;
+    color: var(--white);
+    height: 100%;
+    margin: var(--margin);
+    flex: 1;
+    border-radius: var(--borderRadius);
+  }
+
+  .stepNum {
+    display: flex;
+    margin: 2.2rem;
+    gap: 1rem;
+  }
+
+  .num {
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      border: 1px solid var(--white);
+      font-weight: bold;
+  }
+  
+  .stepDetails :first-child { 
+    color: var(--coolGray);
+    font-weight: medium;
+    letter-spacing: -1px;
+    font-size: 0.9rem;
+  }
+  
+  .stepDetails :last-child {
+    letter-spacing: 1px;
+    color: var(--white);
+    font-weight: bold;
+  }
+
+.active {
+    background-color: var(--pastelBlue);
+    color: var(--marineBlue);
+    border: 1px solid var(--coolGray);
+}
