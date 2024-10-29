@@ -20,8 +20,29 @@
   }
 }
 
+.planCard.active {
+  background-color: var(--alabaster);
+  border: 1px solid var(--purplishBlue);
+}
+
 .planCard img {
   margin: 0 0 2rem;
+}
+
+.planCard .description .title {
+  color: var(--marineBlue);
+  margin: 0 0 0.5rem;
+}
+
+.planCard .description .pricing {
+  color: var(--coolGray);
+  font-size: 0.9rem;
+}
+
+.planCard .description .free {
+  font-size: 0.8rem;
+  margin: 0.5rem 0 0;
+  color: var(--marineBlue);
 }
 
 .switch {
