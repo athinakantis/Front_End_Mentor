@@ -3,7 +3,7 @@ import SelectPlan from "./SelectPlan"
 
 function Page(props) {
     if (props.currentStep === 1) {
-        return <SelectPlan />
+        return <SelectPlan setYearlyPlan={props.setYearlyPlan}/>
     } else {
         return <PersonalInfo currentStep={props.currentStep} setStep={props.setStep}/>
     }

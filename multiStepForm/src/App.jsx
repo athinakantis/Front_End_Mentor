@@ -5,13 +5,15 @@ import Page from './Pages/Page'
 
 function App() {
   const [step, setStep] = useState(1)
-  const [paymentPlan, setPaymentPlan] = useState('Monthly')
+  const [yearlyPlan, setYearlyPlan] = useState(false)
 
   return (
     <main>
       <div className="container">
       <Overview currentStep={step}/>
-      <Page currentStep={step} setStep={setStep} setPaymentPlan={setPaymentPlan}/>
+      <Page currentStep={step} 
+            setStep={setStep} 
+            setYearlyPlan={setYearlyPlan}/>
       </div>
     </main>
   )

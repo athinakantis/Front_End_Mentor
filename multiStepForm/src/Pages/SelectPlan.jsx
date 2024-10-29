@@ -1,5 +1,6 @@
 import { useState } from "react";
 import './SelectPlan.css'
+import Switch from './Switch'
 
 function SelectPlan(props) {
     const [gamePlan, setGamePlan] = useState('Arcade');
@@ -38,7 +39,7 @@ function SelectPlan(props) {
             </div>
             </div>
 
-
+            <Switch setYearlyPlan={props.setYearlyPlan}/>
         </div>
     )
 }
