@@ -1,9 +1,23 @@
 main {
-  max-width: 800px;
-  height: 600px;
+  max-width: 850px;
+  height: 620px;
   margin: 4rem auto;
   display: flex;
   background-color: var(--white);
   box-shadow: 0px 0px 2rem rgba(0,0,0,0.2);
   border-radius: var(--borderRadius);
+}
+
+.container {
+  width:100%;
+  display: flex;
+}
+
+button {
+  border-radius: 8px;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
 }

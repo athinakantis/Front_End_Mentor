@@ -2,10 +2,14 @@
     background-color: var(--purplishBlue);
     text-transform: uppercase;
     color: var(--white);
-    height: 100%;
     margin: var(--margin);
-    flex: 1;
+    flex: 2;
     border-radius: var(--borderRadius);
+
+    background: url(../assets/images/bg-sidebar-desktop.svg);
+    background-size: cover;
+    background-position: bottom;
+
   }
 
   .stepNum {

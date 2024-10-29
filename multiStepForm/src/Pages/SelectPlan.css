@@ -1,0 +1,20 @@
+.plans {
+    display: flex;
+    gap: 1rem;
+}
+
+.planCard {
+    border: 1px solid var(--lightGray);
+    padding: 1rem;
+    flex: 1;
+    border-radius: 8px;
+
+    &:active {
+        border: 1px solid var(--purplishBlue);
+    }
+
+    &:hover {
+        cursor: pointer;
+        border: 1px solid var(--purplishBlue)
+    }
+}

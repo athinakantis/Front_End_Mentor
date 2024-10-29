@@ -1,0 +1,61 @@
+.page {
+    padding: 3rem 4rem 2rem;
+    flex: 3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+
+h2 {
+    font-size: 2.1rem;
+    color: var(--marineBlue);
+    margin: 0 0 1rem;
+}
+
+.pageDescription {
+    color: var(--coolGray);
+    letter-spacing: -0.5px;
+    margin: 0 0 2rem;
+}
+
+
+.formContainer label {
+    color: var(--marineBlue);
+    font-weight: var(--fontMedium);
+    font-size: 0.9rem;
+}
+
+.formContainer input {
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin: 5px 0 1.5rem;
+
+    border: 1px solid var(--coolGray);
+
+    &:focus {
+        border: 1px solid var(--purplishBlue);
+    }
+
+    &:invalid {
+        border: 1px solid var(--strawberryRed);
+    }
+}
+
+.personalInfoContainer button {
+    background-color: var(--darkBlue);
+    color: var(--white);
+    width: max-content;
+    padding: 0.9rem 1.3rem;
+    align-self: end;
+
+    &:hover {
+        background-color: var(--marineBlue);
+    }
+}
