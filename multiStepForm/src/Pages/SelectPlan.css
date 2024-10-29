@@ -46,8 +46,8 @@
 }
 
 .switch {
-  background-color: var(--magnolia);
-  border-radius: 5px;
+  background-color: var(--alabaster);
+  border-radius: 8px;
   display: flex;
   padding: 1rem;
   justify-content: center;
@@ -56,21 +56,24 @@
 }
 
 .switch p {
+  font-size: 0.9rem;
   width: 70px;
   text-align: center;
+  transition: color 300ms;
+  align-self: center;
 }
 
 .switch button {
   border-radius: 11px;
-  width: 2.2rem;
+  width: 2.3rem;
   height: 1.3rem;
   background-color: var(--darkBlue);
 }
 
 .switch button:before {
   content: '';
-  width: 10px;
-  height: 10px;
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
   background-color: white;
   position: relative;
@@ -91,4 +94,24 @@
 
 .switch .inactive {
   color: var(--coolGray);
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation .goBack {
+  background-color: transparent;
+  color: var(--coolGray);
+  font-weight: var(--fontMedium);
+  padding: 1rem 1rem 1rem 0;
+
+  &:hover {
+    color: var(--marineBlue);
+  }
+}
+
+.navigation button {
+  padding: 1rem;
 }

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import './SelectPlan.css'
-import Switch from './Switch'
+import Switch from './Switch';
+import PlanCard from "./PlanCard";
 
 function SelectPlan(props) {
     const [gamePlan, setGamePlan] = useState('Arcade');
@@ -8,41 +9,45 @@ function SelectPlan(props) {
     return (
         <div className="planContainer page">
             <div className="gamePlanContainer">
-
             <h2>Select your plan</h2>
             <p className="pageDescription">You have the option of monthly or yearly billing</p>
 
             <div className="plans">
-
-            <div className={`planCard ${gamePlan === 'Arcade' ? 'active' : 'inactive'}`} onClick={() => setGamePlan('Arcade')}>
-                <img src="../assets/images/icon-arcade.svg" alt="Image of arcade video game controller" />
-
-                <div className="description">
-                <p className="title">Arcade</p>
-                <p className="pricing">{!props.currentPlan ? '$9/mo' : '$90/yr'}</p>
-                {props.currentPlan && <p className='free'>2 months free</p>}
-                </div>
+                <PlanCard
+                    gamePlan={gamePlan}
+                    setGamePlan={setGamePlan}
+                    yearlyPlan={props.yearlyPlan}
+                    plan='Arcade'
+                    alt='Image of arcade video game controller'
+                    monthPrice='9'
+                    yearPrice='90'
+                ></PlanCard>
+                <PlanCard
+                    gamePlan={gamePlan}
+                    setGamePlan={setGamePlan}
+                    yearlyPlan={props.yearlyPlan}
+                    plan='Advanced'
+                    alt='Image of handheld video game controller'
+                    monthPrice='12'
+                    yearPrice='120'
+                ></PlanCard>
+                <PlanCard
+                    gamePlan={gamePlan}
+                    setGamePlan={setGamePlan}
+                    yearlyPlan={props.yearlyPlan}
+                    plan='Pro'
+                    alt='Image of a third controller'
+                    monthPrice='15'
+                    yearPrice='150'
+                ></PlanCard>
             </div>
-            <div className={`planCard ${gamePlan === 'Advanced' ? 'active' : 'inactive'}`} onClick={() => setGamePlan('Advanced')}>
-                <img src="../assets/images/icon-advanced.svg" alt="Image of handheld video game controller" />
-                <div className="description">
-                <p className="title">Advanced</p>
-                <p className="pricing">{!props.currentPlan ? '$12/mo' : '$120/yr'}</p>
-                {props.currentPlan && <p className="free">2 months free</p>}
-                </div>
-            </div>
-            <div className={`planCard ${gamePlan === 'Pro' ? 'active' : 'inactive'}`} onClick={() => setGamePlan('Pro')}>
-                <img src="../assets/images/icon-pro.svg" alt="Image of a third controller" />
-                <div className="description">
-                <p className="title">Pro</p>
-                <p className="pricing">{!props.currentPlan ? '$15/mo' : '$150/yr'}</p>
-                {props.currentPlan && <p className="free">2 months free</p>}
-                </div>
-            </div>
-            </div>
-            <Switch currentPlan={props.currentPlan} setYearlyPlan={props.setYearlyPlan}/>
+            <Switch currentPlan={props.yearlyPlan} setYearlyPlan={props.setYearlyPlan}/>
             </div>
         
+            <nav className="navigation">
+            <button className="goBack" type="button" onClick={() => props.setStep(props.currentStep - 1)}>Go Back</button>
+            <button className="nextStep" type="button" onClick={() => props.setStep(props.currentStep + 1)}>Next Step</button>
+            </nav>
         </div>
     )
 }

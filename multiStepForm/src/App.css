@@ -4,18 +4,25 @@ main {
   margin: 4rem auto;
   display: flex;
   background-color: var(--white);
-  box-shadow: 0px 0px 2rem rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 2rem rgba(0, 0, 0, 0.2);
   border-radius: var(--borderRadius);
 }
 
 .container {
-  width:100%;
+  width: 100%;
   display: flex;
+}
+
+input {
+  font-family: inherit;
 }
 
 button {
   border-radius: 8px;
   border: none;
+  font-family: inherit;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
 
   &:hover {
     cursor: pointer;
