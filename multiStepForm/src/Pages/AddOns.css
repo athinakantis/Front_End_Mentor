@@ -3,7 +3,7 @@
   color: var(--coolGray);
 }
 
-.addOn {
+.addOnsContainer .addOn {
   display: flex;
   padding: 1.3rem 1.5rem;
   border: 1px solid var(--lightGray);
@@ -23,34 +23,31 @@
   }
 }
 
-.addOn .title {
+.addOnsContainer .addOn .title {
   color: var(--marineBlue);
   font-weight: var(--fontMedium);
   margin: 0 0 0.3rem;
 }
 
-.addOn .description {
+.addOnsContainer .addOn .description {
   color: var(--lightGray);
   font-size: 0.9rem;
 }
 
-.addOn input {
+.addOnsContainer .addOn input {
   width: 1.2rem;
   height: 1.2rem;
   padding: 3px;
 
-  &:checked {
-    accent-color: var(--purplishBlue);
-  }
 }
 
-.addOn > div {
+.addOnsContainer .addOn > div {
   display: flex;
   gap: 1.5rem;
   align-items: center;
 }
 
-.pricing {
+.addOnsContainer .pricing {
   font-size: 0.9rem;
   color: var(--purplishBlue);
 }

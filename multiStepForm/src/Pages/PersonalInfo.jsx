@@ -2,6 +2,7 @@ import './PersonalInfo.css'
 
 
 function PersonalInfo(props) {
+
     
     return(
         <div className="personalInfoContainer page">
@@ -18,7 +19,7 @@ function PersonalInfo(props) {
             <input autoComplete='off' type="text" name='phoneInput' id='phoneInput' placeholder="e.g. +1 234 567 890"/>
             </div>
 
-            <button className='nextStep' type="button" onClick={() => props.setStep(props.currentStep + 1)}>Next Step</button>
+            <button className='nextStep' type="button" onClick={() => props.incrementStep()}>Next Step</button>
         </div>
     )
 }

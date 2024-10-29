@@ -1,11 +1,8 @@
-import { useState } from "react";
 import './SelectPlan.css'
 import Switch from './Switch';
 import PlanCard from "./PlanCard";
 
 function SelectPlan(props) {
-    const [gamePlan, setGamePlan] = useState('Arcade');
-
     return (
         <div className="planContainer page">
             <div className="gamePlanContainer">
@@ -14,39 +11,42 @@ function SelectPlan(props) {
 
             <div className="plans">
                 <PlanCard
-                    gamePlan={gamePlan}
-                    setGamePlan={setGamePlan}
-                    yearlyPlan={props.yearlyPlan}
+                    gamePlan={props.gamePlan}
+                    setGamePlan={props.setGamePlan}
+                    paymentPlan={props.paymentPlan}
+                    setPaymentPlan={props.setPaymentPlan}
                     plan='Arcade'
                     alt='Image of arcade video game controller'
                     monthPrice='9'
                     yearPrice='90'
                 ></PlanCard>
                 <PlanCard
-                    gamePlan={gamePlan}
-                    setGamePlan={setGamePlan}
-                    yearlyPlan={props.yearlyPlan}
+                    gamePlan={props.gamePlan}
+                    setGamePlan={props.setGamePlan}
+                    paymentPlan={props.paymentPlan}
+                    setPaymentPlan={props.setPaymentPlan}
                     plan='Advanced'
                     alt='Image of handheld video game controller'
                     monthPrice='12'
                     yearPrice='120'
                 ></PlanCard>
                 <PlanCard
-                    gamePlan={gamePlan}
-                    setGamePlan={setGamePlan}
-                    yearlyPlan={props.yearlyPlan}
+                    gamePlan={props.gamePlan}
+                    setGamePlan={props.setGamePlan}
+                    paymentPlan={props.paymentPlan}
+                    setPaymentPlan={props.setPaymentPlan}
                     plan='Pro'
                     alt='Image of a third controller'
                     monthPrice='15'
                     yearPrice='150'
                 ></PlanCard>
             </div>
-            <Switch currentPlan={props.yearlyPlan} setYearlyPlan={props.setYearlyPlan}/>
+            <Switch paymentPlan={props.paymentPlan} setPaymentPlan={props.setPaymentPlan}/>
             </div>
         
             <nav className="navigation">
-            <button className="goBack" type="button" onClick={() => props.setStep(props.currentStep - 1)}>Go Back</button>
-            <button className="nextStep" type="button" onClick={() => props.setStep(props.currentStep + 1)}>Next Step</button>
+            <button className="goBack" type="button" onClick={() => props.decrementStep()}>Go Back</button>
+            <button className="nextStep" type="button" onClick={() => props.incrementStep()}>Next Step</button>
             </nav>
         </div>
     )

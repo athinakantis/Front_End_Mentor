@@ -1,0 +1,58 @@
+
+
+#summaryPage .description {
+    color: var(--coolGray);
+    margin: 0 0 2rem;
+}
+
+.summaryContainer {
+    background-color: var(--alabaster);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.summary {
+    border-bottom: 1px solid var(--lightGray);
+    padding: 0 0 1rem;
+}
+
+.summary .title {
+    margin: 0 0 5px;
+}
+
+.summary :is(.title, .pricing){
+    color: var(--marineBlue);
+    font-weight: var(--fontBold);
+}
+
+.summary .currentPlan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.change {
+    text-decoration: underline;
+    color: var(--coolGray);
+}
+
+.summaryContainer .addOn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.addOn {
+    margin: 1rem 0 0;
+    font-size: 0.9rem;
+
+}
+
+.addOn .service {
+    color: var(--coolGray);
+}
+
+.addOn .pricing {
+    color: var(--marineBlue);
+    font-weight: var(--fontMedium);
+}

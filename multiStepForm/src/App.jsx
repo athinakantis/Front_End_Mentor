@@ -5,19 +5,31 @@ import Page from './Pages/Page'
 
 function App() {
   const [step, setStep] = useState(1)
-  const [yearlyPlan, setYearlyPlan] = useState(false)
+  const [paymentPlan, setPaymentPlan] = useState(false)
   const [addOns, setAddOns] = useState([])
+  const [gamePlan, setGamePlan] = useState('')
+
+  function incrementStep() {
+    setStep(step => step + 1)
+  }
+
+  function decrementStep() {
+    setStep(step => step - 1)
+  }
 
   return (
     <main>
       <div className="container">
       <Overview currentStep={step}
-            currentPlan={yearlyPlan}
+            currentPlan={paymentPlan}
       />
       <Page currentStep={step} 
-            currentPlan={yearlyPlan}
-            setStep={setStep} 
-            setYearlyPlan={setYearlyPlan}
+            incrementStep={incrementStep} 
+            decrementStep={decrementStep}
+            paymentPlan={paymentPlan}
+            setPaymentPlan={setPaymentPlan}
+            gamePlan={gamePlan}
+            setGamePlan={setGamePlan}
             addOns={addOns}
             setAddOns={setAddOns}/>
       </div>

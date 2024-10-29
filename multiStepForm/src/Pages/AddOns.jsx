@@ -38,8 +38,8 @@ function AddOns(props) {
             </div>
 
             <nav className="navigation">
-            <button className="goBack" type="button" onClick={() => props.setStep(props.currentStep - 1)}>Go Back</button>
-            <button className="nextStep" type="button" onClick={() => props.setStep(props.currentStep + 1)}>Next Step</button>
+            <button className="goBack" type="button" onClick={() => props.decrementStep()}>Go Back</button>
+            <button className="nextStep" type="button" onClick={() => props.incrementStep()}>Next Step</button>
             </nav>
         </div>
     )
