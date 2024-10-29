@@ -12,6 +12,7 @@ function App() {
       <div className="container">
       <Overview currentStep={step}/>
       <Page currentStep={step} 
+            currentPlan={yearlyPlan}
             setStep={setStep} 
             setYearlyPlan={setYearlyPlan}/>
       </div>

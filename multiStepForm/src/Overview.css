@@ -1,5 +1,4 @@
 #stepOverview {
-    background-color: var(--purplishBlue);
     text-transform: uppercase;
     color: var(--white);
     margin: var(--margin);
@@ -42,7 +41,7 @@
     font-weight: bold;
   }
 
-.active {
+#stepOverview .active {
     background-color: var(--pastelBlue);
     color: var(--marineBlue);
     border: 1px solid var(--coolGray);

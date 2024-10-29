@@ -8,6 +8,7 @@
   padding: 1rem;
   flex: 1;
   border-radius: 8px;
+  margin: 0 0 2rem;
 
   &:active {
     border: 1px solid var(--purplishBlue);
@@ -17,4 +18,56 @@
     cursor: pointer;
     border: 1px solid var(--purplishBlue);
   }
+}
+
+.planCard img {
+  margin: 0 0 2rem;
+}
+
+.switch {
+  background-color: var(--magnolia);
+  border-radius: 5px;
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  gap: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.switch p {
+  width: 70px;
+  text-align: center;
+}
+
+.switch button {
+  border-radius: 11px;
+  width: 2.2rem;
+  height: 1.3rem;
+  background-color: var(--darkBlue);
+}
+
+.switch button:before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  z-index: 2;
+  display: block;
+  left: 5px;
+  transition: left 300ms ease;
+}
+
+.switch button.Yearly::before {
+  left: 58%;
+}
+
+.switch .active {
+  color: var(--marineBlue);
+  font-weight: var(--fontMedium);
+}
+
+.switch .inactive {
+  color: var(--coolGray);
 }
