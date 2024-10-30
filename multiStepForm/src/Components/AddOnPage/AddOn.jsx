@@ -8,17 +8,18 @@ function AddOn(props) {
     price: props.price,
   };
 
-  function handleClick() {
-    //Check if item is in array already
-    const isInArray = props.addOns.find(
-      (element) => JSON.stringify(element) === JSON.stringify(item)
-    );
-    if (isInArray) {
-      props.setAddOns(
-        props.addOns.filter((a) => JSON.stringify(a) !== JSON.stringify(item))
+  function handleSelect(e) {
+    if (e.key === ' ' || e.key === 'Enter' || e.type === 'click') {
+      const isInArray = props.addOns.find(
+        (element) => JSON.stringify(element) === JSON.stringify(item)
       );
-    } else {
-      props.setAddOns([...props.addOns, item]);
+      if (isInArray) {
+        props.setAddOns(
+          props.addOns.filter((a) => JSON.stringify(a) !== JSON.stringify(item))
+        );
+      } else {
+        props.setAddOns([...props.addOns, item]);
+      }
     }
   }
 
@@ -31,9 +32,18 @@ function AddOn(props) {
   }, [props.addOns]);
 
   return (
-    <div className='addOn' onClick={() => handleClick()}>
+    <div role='button'
+      tabIndex={0}
+      className='addOn'
+      onClick={(e) => handleSelect(e)}
+      onKeyDown={(e) => handleSelect(e)}
+      aria-label={`Add ${props.serviceName} to plan`}>
       <div>
-        <input type='checkbox' checked={checked} readOnly />
+        <input type='checkbox'
+          checked={checked}
+          readOnly
+          tabIndex={-1}
+          />
         <div className='service'>
           <p className='title'>{props.serviceName}</p>
           <p className='description'>{props.description}</p>

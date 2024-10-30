@@ -1,6 +1,20 @@
 function PlanCard(props) {
+
+    function handleSelect(e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.type ==='click') {
+            props.setGamePlan(props.plan)
+        }
+    }
+
+
     return (
-        <div className={`planCard ${props.gamePlan === props.plan ? 'active' : 'inactive'}`} onClick={() => props.setGamePlan(`${props.plan}`)}>
+        <div 
+        role='button'
+        tabIndex={0}
+        onKeyDown={(e) => handleSelect(e)}
+        onClick={(e) => handleSelect(e)}
+        className={`planCard ${props.gamePlan === props.plan ? 'active' : 'inactive'}`} 
+        >
         <img src={`/src/assets/images/icon-${props.plan}.svg`} alt={props.alt} />
         <div className="description">
         <p className="title">{props.plan}</p>

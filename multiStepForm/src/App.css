@@ -1,16 +1,16 @@
 main {
-  max-width: 850px;
-  height: 620px;
-  margin: 4rem auto;
+  height: 100vh;
   display: flex;
-  background-color: var(--white);
   box-shadow: 0px 0px 2rem rgba(0, 0, 0, 0.2);
-  border-radius: var(--borderRadius);
 }
 
-.container {
-  width: 100%;
+#mainContainer {
   display: flex;
+  width: 900px;
+  height: 620px;
+  margin: auto;
+  border-radius: var(--borderRadius);
+  background-color: var(--white);
 }
 
 input {

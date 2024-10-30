@@ -9,10 +9,6 @@
   padding: 1.5rem;
 }
 
-.summary {
-  padding: 0 0 1.5rem;
-}
-
 .summary .title {
   margin: 0 0 5px;
 }
@@ -28,9 +24,10 @@
   justify-content: space-between;
 }
 
-.change {
+#changePlan {
   text-decoration: underline;
   color: var(--coolGray);
+  background-color: transparent;
 
   &:hover {
     cursor: pointer;
@@ -86,5 +83,5 @@
 .addOn-0 {
   border-top: 1px solid var(--lightGray);
   padding: 1.5rem 0 0;
-  margin: 0;
+  margin: 1.5rem 0 0;
 }

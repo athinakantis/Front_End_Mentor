@@ -2,7 +2,7 @@ import './PersonalInfo.css';
 
 function PersonalInfo(props) {
   return (
-    <div className='personalInfoContainer page'>
+    <section id='personalInfoContainer' className='page'>
       <div className='formContainer'>
         <h2>Personal Info</h2>
         <p className='pageDescription'>
@@ -16,6 +16,7 @@ function PersonalInfo(props) {
           name='nameInput'
           id='nameInput'
           placeholder='e.g. Stephen King'
+      
         />
         <label htmlFor='emailInput'>Email Address</label>
         <input
@@ -42,7 +43,7 @@ function PersonalInfo(props) {
       >
         Next Step
       </button>
-    </div>
+    </section>
   );
 }
 

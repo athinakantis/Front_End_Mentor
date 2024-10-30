@@ -20,8 +20,9 @@ function App() {
 
   return (
     <main>
-      <div className='container'>
+      <div id='mainContainer'>
         <Overview currentStep={step} currentPlan={paymentPlan} />
+
         <Page
           currentStep={step}
           incrementStep={incrementStep}
@@ -33,6 +34,8 @@ function App() {
           addOns={addOns}
           setAddOns={setAddOns}
         />
+
+        {}
       </div>
     </main>
   );

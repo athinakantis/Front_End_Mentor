@@ -1,27 +1,33 @@
+import { useEffect } from 'react';
 import './Summary.css';
 
 function Summary(props) {
-  let gamePlan;
   const addOns = props.addOns;
-  props.gamePlan ? (gamePlan = props.gamePlan) : (gamePlan = 'Arcade');
+
+  useEffect(() => {
+    if (!props.gamePlan) {
+      props.setGamePlan('Arcade')
+    }
+  })
 
   let gamePlanCost;
   if (props.gamePlan === 'Arcade') {
     gamePlanCost = 9;
   } else if (props.gamePlan === 'Advanced') {
     gamePlanCost = 12;
+  } else {
+    gamePlanCost = 15;
   }
-  gamePlanCost = 15;
 
   let totalCost = gamePlanCost;
   if (addOns.length === 1) {
-    totalCost += addOns[0].price;
+    totalCost += +addOns[0].price;
   } else if (addOns.length > 1) {
-    totalCost += addOns.reduce((a, b) => +a.price + +b.price);
+    totalCost += +addOns.reduce((a, b) => +a.price + +b.price);
   }
 
   return (
-    <div id='summaryPageContainer' className='page'>
+    <section id='summaryPageContainer' className='page'>
       <div id='summaryPage'>
         <div>
           <h2>Finishing up</h2>
@@ -35,9 +41,10 @@ function Summary(props) {
             <div className='currentPlan'>
               <div className='service'>
                 <p className='title'>
-                  {gamePlan} ({!props.paymentPlan ? 'Monthly' : 'Yearly'})
+                  {props.gamePlan} ({!props.paymentPlan ? 'Monthly' : 'Yearly'})
                 </p>
-                <p className='change'>Change</p>
+                <button id='changePlan' 
+                  onClick={() => props.setPaymentPlan(!props.paymentPlan)}>Change</button>
               </div>
               <p className='pricing'>
                 $
@@ -82,7 +89,7 @@ function Summary(props) {
           Confirm
         </button>
       </nav>
-    </div>
+    </section>
   );
 }
 

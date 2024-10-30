@@ -35,16 +35,17 @@ h2 {
   border-radius: 8px;
   margin: 8px 0 1.5rem;
   line-height: 1.4;
-  border: 1px solid var(--coolGray);
+  outline: 1px solid var(--lightGray);
   font-weight: var(--fontMedium);
   color: var(--marineBlue);
+  border: none;
 
-  &:focus {
-    border: 1px solid var(--purplishBlue);
+  &:focus, &:active {
+    outline: 1px solid var(--purplishBlue);
   }
 
   &:invalid {
-    border: 1px solid var(--strawberryRed);
+    outline: 1px solid var(--strawberryRed);
   }
 }
 

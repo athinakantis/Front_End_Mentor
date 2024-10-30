@@ -4,7 +4,7 @@ import PlanCard from './PlanCard';
 
 function SelectPlan(props) {
   return (
-    <div className='planContainer page'>
+    <section id='planContainer' className='page'>
       <div className='gamePlanContainer'>
         <h2>Select your plan</h2>
         <p className='pageDescription'>
@@ -65,7 +65,7 @@ function SelectPlan(props) {
           Next Step
         </button>
       </nav>
-    </div>
+    </section>
   );
 }
 
