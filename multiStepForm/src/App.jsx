@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './App.css'
+import './mainCss/App.css'
 import Overview from './Overview'
 import Page from './Pages/Page'
 
