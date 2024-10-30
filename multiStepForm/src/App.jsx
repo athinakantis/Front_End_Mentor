@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './mainCss/App.css'
 import Overview from './Overview'
 import Page from './Pages/Page'
@@ -8,6 +8,10 @@ function App() {
   const [paymentPlan, setPaymentPlan] = useState(false)
   const [addOns, setAddOns] = useState([])
   const [gamePlan, setGamePlan] = useState('')
+
+  useEffect(() => {
+    console.log(addOns)
+  }, [addOns]);
 
   function incrementStep() {
     setStep(step => step + 1)

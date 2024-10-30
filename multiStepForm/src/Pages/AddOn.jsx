@@ -8,26 +8,26 @@ function AddOn(props) {
         price: props.price
     }
 
-    useEffect(() => {
-        const isInArray = props.addOns.find(a => a.serviceName === props.serviceName);
+    function handleClick() {
+        //Check if item is in array already
+        const isInArray = props.addOns.find(element => JSON.stringify(element) === JSON.stringify(item))
         if (isInArray) {
-            setChecked(isInArray)
+            props.setAddOns(props.addOns.filter(a => JSON.stringify(a) !== JSON.stringify(item)));
+            console.log('filtering')
+        } else {
+            props.setAddOns([...props.addOns, item]);
         }
-    })
-
-
-    function handleClick(serviceName) {
-        if (props.addOns.find(a => a.serviceName === serviceName)) {
-            props.setAddOns(props.addOns.filter(a => a.serviceName !== serviceName))
-            setChecked(!checked);
-        };
-        props.setAddOns(prevAddOns => [...prevAddOns, item])
-        setChecked(!checked)
     }
+
+    //Every time addons is changed, set the checked status
+    useEffect(() => {
+        const isInArray = props.addOns.find(element => JSON.stringify(element) === JSON.stringify(item))
+        setChecked(!!isInArray) 
+    }, [props.addOns])
 
     return (
         <div className="addOn" 
-            onClick={() => handleClick(props.serviceName)}>
+            onClick={() => handleClick()}>
             <div>
             <input type="checkbox" checked={checked} readOnly/>
                 <div className="service">
