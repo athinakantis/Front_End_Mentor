@@ -13,7 +13,7 @@
 
 .summary {
     border-bottom: 1px solid var(--lightGray);
-    padding: 0 0 1rem;
+    padding: 0 0 1.5rem;
 }
 
 .summary .title {
@@ -35,6 +35,11 @@
 .change {
     text-decoration: underline;
     color: var(--coolGray);
+
+    &:hover {
+        cursor: pointer;
+        color: var(--purplishBlue)
+    }
 }
 
 .summaryContainer .addOn {
@@ -43,7 +48,7 @@
 }
 
 .addOn {
-    margin: 1rem 0 0;
+    margin: 1.5rem 0 0;
     font-size: 0.9rem;
 
 }
@@ -55,4 +60,18 @@
 .addOn .pricing {
     color: var(--marineBlue);
     font-weight: var(--fontMedium);
+}
+
+#totalCost {
+    display: flex;
+    justify-content: space-between;
+}
+
+#total {
+    color: var(--lightGray);
+}
+
+#totalCost .pricing {
+    color: var(--purplishBlue);
+    font-weight: var(--fontBold);
 }

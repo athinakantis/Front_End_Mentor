@@ -2,13 +2,23 @@ import './Summary.css'
 
 function Summary(props) {
     let gamePlan;
+    const addOns = props.addOns
     props.gamePlan ? gamePlan = props.gamePlan : gamePlan = 'Arcade';
     
-    
-    let cost;
-    if (props.gamePlan === 'Arcade') cost = 9;
-    else if (props.gamePlan === 'Advanced') cost = 12;
-    else cost = 15;
+    let gamePlanCost;
+    if (props.gamePlan === 'Arcade') {
+        gamePlanCost = 9
+    } else if (props.gamePlan === 'Advanced') {
+        gamePlanCost = 12;
+    }
+    gamePlanCost = 15;
+
+    let totalCost = gamePlanCost
+    if (addOns.length === 1) {
+        totalCost += addOns[0].price
+    } else if (addOns.length > 1) {
+        totalCost += addOns.reduce((a,b) => +a.price + +b.price)
+    }
 
     return (
         <div id="summaryPageContainer" className="page">
@@ -23,14 +33,14 @@ function Summary(props) {
             <div className="summary">
                 <div className="currentPlan">
                     <div className="service">
-                        <p className='title'>{gamePlan} ({!props.paymentPlan ? 'Monthly' : 'Yearly'})</p>
+                        <p className='title'>{gamePlan} ({})</p>
                         <p className='change'>Change</p>
                     </div>
-                    <p className='pricing'>${!props.paymentPlan ? `${cost}/mo` : `${cost * 10}/yr`}</p>
+                    <p className='pricing'>${!props.paymentPlan ? `${gamePlanCost}/mo` : `${gamePlanCost * 10}/yr`}</p>
                 </div>
             </div>
 
-            {props.addOns.map(addOn => (
+            {addOns.map(addOn => (
                 <div className="addOn" key={`${addOn.serviceName}`}>
                     <p className='service'>{addOn.serviceName}</p>
                     <p className='pricing'>{!props.paymentPlan ? `+$${addOn.price}/mo` : `+$${addOn.price * 10}/yr`}</p>
@@ -38,7 +48,8 @@ function Summary(props) {
             ))}
         </div>
         <div id="totalCost">
-            <p>Total (per {!props.paymentPlan ? 'Month' : 'Year'})</p>
+            <p id='total'>Total (per {!props.paymentPlan ? 'Month' : 'Year'})</p>
+            <p className='pricing'>+${totalCost}/{!props.paymentPlan ? 'mo' : 'yr'}</p>
         </div>
         </div>
 

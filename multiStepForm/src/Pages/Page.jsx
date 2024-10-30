@@ -4,7 +4,6 @@ import AddOns from "./AddOns"
 import Summary from "./Summary"
 
 function Page(props) {
-    console.log(props.currentStep)
     if (props.currentStep === 1) {
         return (
             <>
