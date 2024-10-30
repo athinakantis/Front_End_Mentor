@@ -1,9 +1,9 @@
-.addOnsContainer > p {
+#addOnsContainer > p {
   margin: 0 0 2rem;
   color: var(--coolGray);
 }
 
-.addOnsContainer .addOn {
+#addOnsContainer .addOn {
   display: flex;
   padding: 1.3rem 1.5rem;
   border: 1px solid var(--lightGray);
@@ -23,31 +23,31 @@
   }
 }
 
-.addOnsContainer .addOn .title {
+#addOnsContainer .addOn .title {
   color: var(--marineBlue);
   font-weight: var(--fontMedium);
   margin: 0 0 0.3rem;
 }
 
-.addOnsContainer .addOn .description {
+#addOnsContainer .addOn .description {
   color: var(--lightGray);
   font-size: 0.9rem;
 }
 
-.addOnsContainer .addOn input {
+#addOnsContainer .addOn input {
   width: 1.2rem;
   height: 1.2rem;
   padding: 3px;
 
 }
 
-.addOnsContainer .addOn > div {
+#addOnsContainer .addOn > div {
   display: flex;
   gap: 1.5rem;
   align-items: center;
 }
 
-.addOnsContainer .pricing {
+#addOnsContainer .pricing {
   font-size: 0.9rem;
   color: var(--purplishBlue);
 }

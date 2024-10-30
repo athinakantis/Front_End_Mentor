@@ -3,14 +3,23 @@ import SelectPlan from '../SelectPlan/SelectPlan';
 import AddOns from '../AddOnPage/AddOns';
 import Summary from '../Summary/Summary';
 import Confirmation from '../Confirmation/Confirmation';
+import { useState } from 'react';
 
 function Page(props) {
-  if (props.currentStep === 1) {
+  const [confirm, setConfirm] = useState(false)
+
+  if (confirm) {
+    return (
+      <Confirmation />
+    )
+  } else if (props.currentStep === 1) {
     return (
       <>
         <PersonalInfo
-          currentStep={props.incrementStep}
+          currentStep={props.currentStep}
+          decrementStep={props.decrementStep}
           incrementStep={props.incrementStep}
+          setConfirm={setConfirm}
         />
       </>
     );
@@ -51,6 +60,7 @@ function Page(props) {
           incrementStep={props.incrementStep}
           decrementStep={props.decrementStep}
           addOns={props.addOns}
+          setConfirm={setConfirm}
         />
       </>
     );

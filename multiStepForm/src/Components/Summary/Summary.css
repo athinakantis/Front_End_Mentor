@@ -71,15 +71,6 @@
   font-size: 1.2rem;
 }
 
-#confirm {
-  background-color: var(--purplishBlue);
-  color: var(--white);
-
-  &:hover {
-    background-color: var(--pastelBlue);
-  }
-}
-
 .addOn-0 {
   border-top: 1px solid var(--lightGray);
   padding: 1.5rem 0 0;

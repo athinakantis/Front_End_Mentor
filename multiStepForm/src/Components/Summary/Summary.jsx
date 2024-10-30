@@ -72,20 +72,23 @@ function Summary(props) {
         <div id='totalCost'>
           <p id='total'>Total (per {!props.paymentPlan ? 'month' : 'year'})</p>
           <p className='pricing'>
-            +${totalCost}/{!props.paymentPlan ? 'mo' : 'yr'}
+            +${!props.paymentPlan ? totalCost : totalCost * 10}/{!props.paymentPlan ? 'mo' : 'yr'}
           </p>
         </div>
       </div>
 
       <nav className='navigation'>
         <button
-          className='goBack'
+          id='goBack'
           type='button'
-          onClick={() => props.decrementStep()}
+          onClick={props.decrementStep}
         >
           Go Back
         </button>
-        <button id='confirm' type='button'>
+        <button 
+        id='confirm' 
+        type='button'
+        onClick={() => props.setConfirm(true)}>
           Confirm
         </button>
       </nav>

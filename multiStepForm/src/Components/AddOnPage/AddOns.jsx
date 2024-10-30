@@ -4,11 +4,11 @@ import './AddOns.css';
 function AddOns(props) {
   return (
     <div className='page'>
-      <div className='addOnsContainer'>
+      <div id='addOnsContainer'>
         <h2>Pick add-ons</h2>
-        <p>Add-ons help enhance your gaming experience</p>
+        <p className='pageDescription'>Add-ons help enhance your gaming experience</p>
 
-        <div className='addOnContainer'>
+        <div id='addOnContainer'>
           <AddOn
             addOns={props.addOns}
             setAddOns={props.setAddOns}
@@ -34,24 +34,18 @@ function AddOns(props) {
             price='2'
           />
         </div>
-      </div>
 
-      <nav className='navigation'>
-        <button
-          className='goBack'
-          type='button'
-          onClick={() => props.decrementStep()}
-        >
-          Go Back
-        </button>
-        <button
-          className='nextStep'
-          type='button'
-          onClick={() => props.incrementStep()}
-        >
-          Next Step
-        </button>
-      </nav>
+        <nav>
+          <button id="goBack"
+          onClick={props.decrementStep}>
+            Go Back
+          </button>
+          <button id="nextStep"
+          onClick={props.incrementStep}>
+            Next Step
+          </button>
+        </nav>
+      </div>
     </div>
   );
 }

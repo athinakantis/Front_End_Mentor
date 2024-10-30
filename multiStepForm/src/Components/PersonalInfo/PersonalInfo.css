@@ -33,6 +33,7 @@ h2 {
 .formContainer input {
   padding: 0.8rem;
   border-radius: 8px;
+  font-size: 1rem;
   margin: 8px 0 1.5rem;
   line-height: 1.4;
   outline: 1px solid var(--lightGray);
@@ -49,14 +50,13 @@ h2 {
   }
 }
 
-.nextStep {
-  background-color: var(--darkBlue);
-  color: var(--white);
-  width: max-content;
-  padding: 0.9rem 1.3rem;
-  align-self: end;
+.inputInfo {
+  display: flex;
+  justify-content: space-between;
+}
 
-  &:hover {
-    background-color: var(--marineBlue);
-  }
+.error {
+  font-size: 0.9rem;
+  font-weight: var(--fontMedium);
+  color: var(--strawberryRed);
 }

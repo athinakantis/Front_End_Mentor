@@ -34,8 +34,6 @@ function App() {
           addOns={addOns}
           setAddOns={setAddOns}
         />
-
-        {}
       </div>
     </main>
   );

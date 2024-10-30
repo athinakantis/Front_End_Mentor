@@ -49,19 +49,13 @@ function SelectPlan(props) {
         />
       </div>
 
-      <nav className='navigation'>
-        <button
-          className='goBack'
-          type='button'
-          onClick={() => props.decrementStep()}
-        >
+      <nav>
+        <button id="goBack"
+        onClick={props.decrementStep}>
           Go Back
         </button>
-        <button
-          className='nextStep'
-          type='button'
-          onClick={() => props.incrementStep()}
-        >
+        <button id="nextStep"
+        onClick={props.incrementStep}>
           Next Step
         </button>
       </nav>
