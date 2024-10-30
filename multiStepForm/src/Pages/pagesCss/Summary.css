@@ -65,13 +65,21 @@
 #totalCost {
     display: flex;
     justify-content: space-between;
+    padding: 1.5rem;
 }
 
 #total {
     color: var(--lightGray);
+    font-family: var(--fontMedium);
 }
 
 #totalCost .pricing {
     color: var(--purplishBlue);
     font-weight: var(--fontBold);
+    font-size: 1.2rem;
+}
+
+#confirm {
+    background-color: var(--purplishBlue);
+    color: var(--white);
 }

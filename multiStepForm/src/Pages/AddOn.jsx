@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function AddOn(props) {
     const [checked, setChecked] = useState(false)
@@ -7,6 +7,13 @@ function AddOn(props) {
         serviceName: props.serviceName,
         price: props.price
     }
+
+    useEffect(() => {
+        const isInArray = props.addOns.find(a => a.serviceName === props.serviceName);
+        if (isInArray) {
+            setChecked(isInArray)
+        }
+    })
 
 
     function handleClick(serviceName) {

@@ -1,5 +1,5 @@
 import AddOn from "./AddOn";
-import './AddOns.css'
+import './pagesCss/AddOns.css'
 
 function AddOns(props) {
     return (

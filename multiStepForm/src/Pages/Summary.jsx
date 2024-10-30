@@ -48,7 +48,7 @@ function Summary(props) {
             ))}
         </div>
         <div id="totalCost">
-            <p id='total'>Total (per {!props.paymentPlan ? 'Month' : 'Year'})</p>
+            <p id='total'>Total (per {!props.paymentPlan ? 'month' : 'year'})</p>
             <p className='pricing'>+${totalCost}/{!props.paymentPlan ? 'mo' : 'yr'}</p>
         </div>
         </div>

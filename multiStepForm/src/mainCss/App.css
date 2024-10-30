@@ -28,3 +28,7 @@ button {
     cursor: pointer;
   }
 }
+
+.navigation button {
+  padding: 1rem 1.5rem;
+}
