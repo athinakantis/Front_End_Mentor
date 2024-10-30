@@ -32,6 +32,7 @@
 .planCard .description .title {
   color: var(--marineBlue);
   margin: 0 0 0.5rem;
+  font-weight: var(--fontMedium);
 }
 
 .planCard .description .pricing {

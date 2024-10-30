@@ -33,9 +33,11 @@ h2 {
 .formContainer input {
   padding: 0.8rem;
   border-radius: 8px;
-  margin: 5px 0 1.5rem;
-
+  margin: 8px 0 1.5rem;
+  line-height: 1.4;
   border: 1px solid var(--coolGray);
+  font-weight: var(--fontMedium);
+  color: var(--marineBlue);
 
   &:focus {
     border: 1px solid var(--purplishBlue);

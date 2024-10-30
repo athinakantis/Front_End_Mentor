@@ -1,0 +1,12 @@
+#confirmation {
+  text-align: center;
+  margin: auto;
+  flex: 4;
+}
+
+#confirmation p {
+  color: var(--coolGray);
+  width: 430px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
