@@ -1,4 +1,4 @@
-import './SelectPlan.css'
+import './pagesCss/SelectPlan.css'
 import Switch from './Switch';
 import PlanCard from "./PlanCard";
 

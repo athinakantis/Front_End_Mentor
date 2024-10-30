@@ -1,4 +1,4 @@
-import './PersonalInfo.css'
+import './pagesCss/PersonalInfo.css'
 
 
 function PersonalInfo(props) {

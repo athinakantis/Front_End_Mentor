@@ -1,4 +1,4 @@
-import './Summary.css'
+import './pagesCss/Summary.css'
 
 function Summary(props) {
     let gamePlan;
