@@ -23,7 +23,7 @@ function Summary(props) {
   if (addOns.length === 1) {
     totalCost += +addOns[0].price;
   } else if (addOns.length > 1) {
-    totalCost += +addOns.reduce((a, b) => +a.price + +b.price);
+    totalCost += +addOns.reduce((a, b) => a + +b.price, 0);
   }
 
   return (
@@ -31,7 +31,7 @@ function Summary(props) {
       <div id='summaryPage'>
         <div>
           <h2>Finishing up</h2>
-          <p className='description'>
+          <p className='pageDescription'>
             Double-check everything looks OK before confirming.
           </p>
         </div>

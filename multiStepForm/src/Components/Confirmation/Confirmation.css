@@ -7,7 +7,6 @@
 
 #confirmation p {
   color: var(--coolGray);
-  width: 440px;
   margin: 0 auto;
   line-height: 1.5;
 }

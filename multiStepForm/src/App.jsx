@@ -2,7 +2,6 @@ import { useState } from 'react';
 import './App.css';
 import Overview from './Components/Overview/Overview';
 import Page from './Components/Page/Page';
-import Confirmation from './Components/Confirmation/Confirmation';
 
 function App() {
   const [step, setStep] = useState(1);
@@ -35,6 +34,8 @@ function App() {
           setAddOns={setAddOns}
         />
       </div>
+
+      <p id='attribution'><a target='_blank' href="https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ">Front End Mentor</a> challenge, completed by <a target='_blank' href="https://github.com/athinakantis">Athina Kantis</a></p>
     </main>
   );
 }

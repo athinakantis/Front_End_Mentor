@@ -27,7 +27,7 @@ button {
   border-radius: 8px;
   border: none;
   font-family: inherit;
-  font-size: 0.9rem;
+  font-size: inherit;
   letter-spacing: 0.5px;
 
   &:hover {
@@ -36,6 +36,7 @@ button {
 }
 
 nav {
+  margin: auto 0 0;
   display: flex;
   justify-content: space-between;
 }
@@ -55,7 +56,7 @@ nav {
   color: var(--white);
   width: max-content;
   padding: 0.9rem 1.3rem;
-  align-self: end;
+  margin: auto 0 0 auto;
 
   &:hover {
     background-color: var(--marineBlue);
@@ -71,6 +72,11 @@ nav {
   &:hover {
     color: var(--marineBlue);
   }
+}
+
+#attribution {
+  position: absolute;
+  bottom: 1rem;
 }
 
 @media only screen and (max-width: 790px) {
@@ -89,6 +95,7 @@ nav {
     flex-direction: column;
     margin: 0;
     position: relative;
+    align-items: center;
   }
 
   main {
@@ -99,7 +106,7 @@ nav {
     display: none;
   }
 
-  #mainContainer .page {
+  #mainContainer :is(.page, #confirmation) {
     z-index: 2;
     margin: 0 1rem;
     background-color: var(--white);
@@ -112,7 +119,7 @@ nav {
   }
 
   .page h2 {
-    font-size: 1.6rem;
+    font-size: 2.2rem;
   }
 
   .pageDescription {
@@ -123,7 +130,7 @@ nav {
     background-image: url(assets/images/bg-sidebar-mobile.svg);
     border-radius: 0;
     display: flex;
-    height: 200px;
+    height: 250px;
     justify-content: center;
     position: absolute;
     width: 100%;
@@ -131,12 +138,12 @@ nav {
   }
 
   #stepOverview .stepNum {
-    margin: 2rem 0.6rem 0;
+    margin: 3rem 0.6rem 0;
   }
 
   #stepOverview .num {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
   }
 
   #nextStep {
@@ -172,4 +179,56 @@ nav {
     justify-self: start;
   }
 
+  #addOnContainer .addOn .title {
+    font-size: 1.1rem;
+  }
+
+  #addOnsContainer #addOnContainer .addOn .description {
+    font-size: 1rem;
+  }
+
+  #addOnsContainer #addOnContainer input {
+    width: 1.7rem;
+    height: 1.6rem;
+  }
+
+  #addOnsContainer input:checked::after {
+    width: 1.7rem;
+    height: 1.6rem;
+    background-size: 70%;
+  }
+
+  .summaryContainer :is(.currentPlan, .addOn, #changePlan) {
+    font-size: 1.2rem;
+  }
+
+  #summaryPage #totalCost {
+    font-size: 1.2rem;
+    padding: 2.5rem 1.5rem 0;
+  }
+
+  .navigation {
+    font-size: 1.2rem;
+  }
+
+  #mainContainer #summaryPageContainer {
+    padding: 2rem 2rem 2.5rem;
+  }
+
+  #mainContainer #confirmation {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #mainContainer #confirmation img {
+    margin: 0 0 2rem;
+  }
+
+  #mainContainer #confirmation p {
+    width: 90%;
+    font-size: 1.4rem;
+  }
 }
