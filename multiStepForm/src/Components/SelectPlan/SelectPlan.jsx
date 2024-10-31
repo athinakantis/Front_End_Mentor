@@ -1,8 +1,19 @@
 import './SelectPlan.css';
 import Switch from './Switch';
 import PlanCard from './PlanCard';
+import { useState } from 'react';
 
 function SelectPlan(props) {
+  const [error, setError] = useState('')
+
+  function checkPlan() {
+    if (!props.gamePlan) {
+      setError('Please select a plan')
+    } else {
+      props.incrementStep()
+    }
+  }
+
   return (
     <section id='planContainer' className='page'>
       <div className='gamePlanContainer'>
@@ -17,6 +28,7 @@ function SelectPlan(props) {
             setGamePlan={props.setGamePlan}
             paymentPlan={props.paymentPlan}
             setPaymentPlan={props.setPaymentPlan}
+            setError={setError}
             plan='Arcade'
             alt='Image of arcade video game controller'
             monthPrice='9'
@@ -27,6 +39,7 @@ function SelectPlan(props) {
             setGamePlan={props.setGamePlan}
             paymentPlan={props.paymentPlan}
             setPaymentPlan={props.setPaymentPlan}
+            setError={setError}
             plan='Advanced'
             alt='Image of handheld video game controller'
             monthPrice='12'
@@ -37,6 +50,7 @@ function SelectPlan(props) {
             setGamePlan={props.setGamePlan}
             paymentPlan={props.paymentPlan}
             setPaymentPlan={props.setPaymentPlan}
+            setError={setError}
             plan='Pro'
             alt='Image of a third controller'
             monthPrice='15'
@@ -47,6 +61,7 @@ function SelectPlan(props) {
           paymentPlan={props.paymentPlan}
           setPaymentPlan={props.setPaymentPlan}
         />
+        {error && <p className='error'>Please select a plan</p>}
       </div>
 
       <nav>
@@ -55,7 +70,7 @@ function SelectPlan(props) {
           Go Back
         </button>
         <button id="nextStep"
-        onClick={props.incrementStep}>
+        onClick={checkPlan}>
           Next Step
         </button>
       </nav>

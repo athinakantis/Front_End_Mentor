@@ -3,9 +3,9 @@ function PlanCard(props) {
     function handleSelect(e) {
         if (e.key === 'Enter' || e.key === ' ' || e.type ==='click') {
             props.setGamePlan(props.plan)
+            props.setError('')
         }
     }
-
 
     return (
         <div 

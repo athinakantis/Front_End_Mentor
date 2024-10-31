@@ -96,3 +96,8 @@
 .switch .inactive {
   color: var(--coolGray);
 }
+
+.gamePlanContainer .error {
+  margin: 1rem 0 0 auto;
+  width: max-content;
+}
