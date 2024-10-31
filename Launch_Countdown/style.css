@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
 :root {
   --white: hsl(0, 0%, 100%);
   --muddy: hsl(236, 21%, 26%);
@@ -16,7 +18,7 @@
 
 body {
   font-size: 14px;
-  font-family: var(--font), Arial, Helvetica, sans-serif;
+  font-family: var(--font), sans-serif;
 
   background-color: var(--veryDarkBlue);
   background-image: url(images/pattern-hills.svg),
