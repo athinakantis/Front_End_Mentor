@@ -5,8 +5,6 @@
   "homepage": "https://athinakantis.github.io/Front_End_Mentor/multiStepForm",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -b main -p my-react-app",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
