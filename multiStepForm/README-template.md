@@ -1,12 +1,12 @@
 # Frontend Mentor - Multi-step form solution using React
 
-This is a solution to the [Multi-step form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ)  
+This is a solution to the [Multi-step form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ)
 
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
+  - [The challenge](#the-challenge)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -14,8 +14,11 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
   - [Continued development](#continued-development)
 - [Author](#author)
 
-
 ## Overview
+
+### Screenshot
+
+![](./screenshot.jpg)
 
 ### The challenge
 
@@ -30,10 +33,6 @@ Users should be able to:
   - A field has been missed
   - The email address is not formatted correctly
   - A step is submitted, but no selection has been made
-
-### Screenshot
-
-![](./screenshot.jpg)
 
 ### Links
 
@@ -56,20 +55,21 @@ Users should be able to:
 - Custom Checkboxed
 - Practice React
 
-
 #### ARIA attributes
+
 For the divs to be clickable (particularly the add-ons),  
 I gave them the attribute of `role='button'` as well as `tabIndex={0}`  
-This ensure that the user can tab to the div and select it using Enter or space.  
+This ensure that the user can tab to the div and select it using Enter or space.
 
-This execise definitely helped me practice my use of ARIA attributes and expand my knowledge on how to see if my code is accessible.  
-
+This execise definitely helped me practice my use of ARIA attributes and expand my knowledge on how to see if my code is accessible.
 
 #### Checkboxes
+
 I learnt how to do custom checkboxes!
 To achieve that I added `appearance: none` to the **checked** checkbox, and a pseudo element with a background image
+
 ```css
-/* Checkbox Styling */ 
+/* Checkbox Styling */
 #addOnsContainer .addOn input {
   width: 1.2rem;
   height: 1.2rem;
@@ -102,16 +102,18 @@ To achieve that I added `appearance: none` to the **checked** checkbox, and a ps
 ```
 
 #### Practice React
+
 I've used React previously, but had limited understanding surrounding props, the unidirectional flow and useEffect. After having my wonderful teacher explain these concepts, everything started falling more into place. I really expected to struggle more with this project but it went surprisingly smoothly and I really learnt a lot!
 
 ### Continued development
 
 #### ARIA
+
 I want to expand my knowledge on **ARIA** attributes more, to ensure my work is **accessible**, so that everyone has the opportunity to browse the web.
 
 #### React
-I'm loving the flow of React, and want to keep exploring how to make amazing apps with it!
 
+I'm loving the flow of React, and want to keep exploring how to make amazing apps with it!
 
 ## Author
 

@@ -4,12 +4,6 @@ import './Summary.css';
 function Summary(props) {
   const addOns = props.addOns;
 
-  useEffect(() => {
-    if (!props.gamePlan) {
-      props.setGamePlan('Arcade')
-    }
-  })
-
   let gamePlanCost;
   if (props.gamePlan === 'Arcade') {
     gamePlanCost = 9;

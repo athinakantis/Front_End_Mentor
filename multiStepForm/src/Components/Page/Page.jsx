@@ -20,6 +20,8 @@ function Page(props) {
           decrementStep={props.decrementStep}
           incrementStep={props.incrementStep}
           setConfirm={setConfirm}
+          setNewUser={props.setNewUser}
+          newUser={props.newUser}
         />
       </>
     );

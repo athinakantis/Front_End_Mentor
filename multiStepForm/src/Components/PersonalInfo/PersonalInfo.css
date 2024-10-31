@@ -40,12 +40,19 @@ h2 {
   font-weight: var(--fontMedium);
   color: var(--marineBlue);
 
-  &:focus, &:active {
+  &:focus,
+  &:active {
     outline: 1px solid var(--purplishBlue);
   }
 
   &:invalid {
     outline: 1px solid var(--strawberryRed);
+  }
+
+  &::placeholder {
+    color: var(--coolGray);
+    font-weight: var(--fontLight);
+    letter-spacing: 0.2px;
   }
 }
 

@@ -10,3 +10,7 @@
   margin: 0 auto;
   line-height: 1.5;
 }
+
+#confirmation img {
+  margin: 0 0 2rem;
+}

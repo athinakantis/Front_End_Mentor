@@ -2,11 +2,16 @@ import { useState } from 'react';
 import './PersonalInfo.css';
 
 function PersonalInfo(props) {
-  const [nameError, setNameError] = useState(true)
-  const [emailError, setEmailError] = useState(true)
-  const [numError, setNumError] = useState(true)
+  const [nameError, setNameError] = useState('')
+  const [emailError, setEmailError] = useState('')
+  const [numError, setNumError] = useState('')
 
   function checkName(e) {
+    props.setNewUser({
+      name: e.target.value,
+      email: props.newUser.email,
+      phone: props.newUser.phone
+    })
     if (e.target.value.length < 1) {
       setNameError('This field is required')
     } else {
@@ -15,6 +20,11 @@ function PersonalInfo(props) {
   }
 
   function checkEmail(e) {
+    props.setNewUser({
+      name: props.newUser.name,
+      email: e.target.value,
+      phone: props.newUser.phone
+    })
     if (e.target.length < 1) {
       setEmailError('This field is required')
     } else if (e.target.validity.typeMismatch) {
@@ -25,6 +35,12 @@ function PersonalInfo(props) {
   }
 
   function checkPhone(e) {
+    props.setNewUser({
+      name: props.newUser.name,
+      email: props.newUser.email,
+      phone: e.target.value
+    })
+
     if (e.target.value.length < 1) {
       setNumError('This field is required')
     } else {
@@ -33,11 +49,11 @@ function PersonalInfo(props) {
   }
 
   function validateInput() {
-    if (nameError) {
+    if (!props.newUser.name) {
       setNameError('This field is required')
-    } else if (emailError) {
+    } else if (!props.newUser.email) {
       setEmailError('This field is required')
-    } else if (numError) {
+    } else if (!props.newUser.phone) {
       setNumError('This field is required')
     } else {
       props.incrementStep()
@@ -61,8 +77,9 @@ function PersonalInfo(props) {
           type='text'
           name='nameInput'
           id='nameInput'
+          value={props.newUser.name}
           placeholder='e.g. Stephen King'
-          onInput={(e) => checkName(e)}
+          onChange={(e) => checkName(e)}
         />
         <div className="inputInfo">
         <label htmlFor='emailInput'>Email Address</label>
@@ -73,6 +90,7 @@ function PersonalInfo(props) {
           type='email'
           name='email'
           id='emailInput'
+          value={props.newUser.email}
           placeholder='e.g. stephenking@lorem.com'
           onInput={(e) => checkEmail(e)}
         />
@@ -85,6 +103,7 @@ function PersonalInfo(props) {
           type='text'
           name='phoneInput'
           id='phoneInput'
+          value={props.newUser.phone}
           placeholder='e.g. +1 234 567 890'
           onInput={(e) => checkPhone(e)}
         />

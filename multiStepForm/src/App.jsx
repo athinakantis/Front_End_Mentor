@@ -8,6 +8,11 @@ function App() {
   const [paymentPlan, setPaymentPlan] = useState(false);
   const [addOns, setAddOns] = useState([]);
   const [gamePlan, setGamePlan] = useState('');
+  const [newUser, setNewUser] = useState({
+    name: '',
+    email: '',
+    phone: ''
+  })
 
   function incrementStep() {
     setStep((step) => step + 1);
@@ -32,6 +37,8 @@ function App() {
           setGamePlan={setGamePlan}
           addOns={addOns}
           setAddOns={setAddOns}
+          setNewUser={setNewUser}
+          newUser={newUser}
         />
       </div>
 
