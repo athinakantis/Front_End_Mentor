@@ -15,8 +15,10 @@ function PersonalInfo(props) {
   }
 
   function checkEmail(e) {
-    if (e.target.validity.typeMismatch || e.target.length < 1) {
+    if (e.target.length < 1) {
       setEmailError('This field is required')
+    } else if (e.target.validity.typeMismatch) {
+      setEmailError('Email must contain @')
     } else {
       setEmailError('')
     }
