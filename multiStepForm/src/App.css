@@ -178,9 +178,30 @@ nav {
     gap: 1rem;
   }
 
+  .page .planCard .description .title {
+    font-size: 1.2rem;
+  }
+
+  .page .planCard .description .pricing {
+    font-size: 1.1rem;
+  }
+
+  .page .planCard .description .free {
+    font-size: 1rem;
+  }
+
   .page .planCard img {
     margin: 0;
-    justify-self: start;
+    width: 3rem;
+    height: max-content;
+  }
+
+  .page .switch p {
+    font-size: 1.2rem;
+  }
+
+  .page .switch {
+    gap: 2rem;
   }
 
   #addOnContainer .addOn .title {

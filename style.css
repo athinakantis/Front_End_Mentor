@@ -65,6 +65,11 @@ a {
   border: 1px solid black;
   display: block;
   font-weight: 800;
+  background-color: white;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 /* 
