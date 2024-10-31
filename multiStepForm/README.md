@@ -1,6 +1,7 @@
 # Frontend Mentor - Multi-step form solution using React
 
-This is a solution to the [Multi-step form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ)
+My solution to the [Multi-step form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ)  
+This was a fun and very enriching challenge! It definitely opened my eyes to the possibilities of React and I look forward to working with it more.
 
 ## Table of contents
 
@@ -18,7 +19,7 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Screenshot](src/assets/finalProduct/preview_Summary.png)
 
 ### The challenge
 
