@@ -9,7 +9,7 @@ You can view them all on this github page :)
 ## Challenges Completed
 
 - Multi Step Form - Completed October 31st 2024
-  - [Live Page](https://athinakantis.github.io/Front_End_Mentor/MultiStepForm)
+  - [Live Page](https://athinakantis.github.io/MultiStepForm)
   - [Source Code](https://github.com/athinakantis/Front_End_Mentor/tree/main/multiStepForm)  
 - Birthday Countdown (Originally launch countdown) - Completed October 21st 2024
   - [Live Page](https://athinakantis.github.io/Front_End_Mentor/Launch_Countdown/)
