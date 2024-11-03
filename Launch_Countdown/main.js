@@ -171,11 +171,10 @@ function happyBirthday() {
     setInterval(() => {
         for (let i = 0; i < 10; i++) {
             let firework = document.createElement('i');
-            firework.style.top = window.innerHeight + 'px';
+            firework.style.top = (window.innerHeight - 10) + 'px';
             firework.style.left = randomPos(0, window.innerWidth) + 'px';
             document.body.appendChild(firework);
 
-            // Animate the firework upwards
             firework.animate({
                 transform: `translate(${randomPos(-100, 100)}px, -${randomPos(200, (window.innerHeight - 200))}px)`,
                 opacity: [1, 0]
@@ -185,7 +184,10 @@ function happyBirthday() {
                 fill: 'forwards'
             });
 
-            // After the firework reaches its endpoint, create sparks
+            if (firework.style.left > window.innerWidth) {
+                firework.remove()
+            }
+
             setTimeout(() => {
                 createSparks(firework);
                 firework.remove();
@@ -212,6 +214,10 @@ function createSparks(firework) {
             easing: 'ease-out',
             fill: 'forwards'
         });
+
+        if (spark.left < window.innerWidth || spark.left > window.innerWidth) {
+            spark.remove()
+        }
 
         setTimeout(() => {
             spark.remove();
