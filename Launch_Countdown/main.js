@@ -172,7 +172,7 @@ function happyBirthday() {
         for (let i = 0; i < 10; i++) {
             let firework = document.createElement('i');
             firework.style.top = (window.innerHeight - 10) + 'px';
-            firework.style.left = randomPos(0, window.innerWidth) + 'px';
+            firework.style.left = randomPos(100, (window.innerWidth - 150)) + 'px';
             document.body.appendChild(firework);
 
             firework.animate({
@@ -184,7 +184,7 @@ function happyBirthday() {
                 fill: 'forwards'
             });
 
-            if (firework.style.left > window.innerWidth) {
+            if (firework.style.left > window.innerWidth || firework.style.left < window.innerWidth) {
                 firework.remove()
             }
 
