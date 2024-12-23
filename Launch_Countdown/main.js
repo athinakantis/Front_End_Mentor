@@ -9,7 +9,7 @@ function isBirthday() {
 }
 
 if (!isBirthday() && now > countdownDate) {
-    countdownDate.setFullYear(now.getFullYear())
+    countdownDate.setFullYear(now.getFullYear() + 1)
 }
 
 const daysUpper = document.querySelector('#daysUpper');
