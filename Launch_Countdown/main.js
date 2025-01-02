@@ -53,7 +53,7 @@ function initiateTime() {
 
 if (now.getTime() < countdownDate) {
   initiateTime();
-  interval = setInterval(updateTime, 1000);
+  setInterval(updateTime, 1000);
 } else {
   daysPrevCount.forEach((p) => (p.textContent = 0));
   hoursPrevCount.forEach((p) => (p.textContent = 0));
@@ -114,7 +114,8 @@ function updateTime() {
 }
 
 function calculateTime() {
-  const distance = countdownDate - now.getTime();
+  const timeNow = new Date().getTime();
+  const distance = countdownDate - timeNow;
 
   daysUntil = Math.floor(distance / (1000 * 60 * 60 * 24));
   hoursUntil = Math.floor(
